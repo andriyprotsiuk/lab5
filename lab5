@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    const short int size = 10;
+    int a[size];
+    int* ptr;
+    ptr = a;
+    cout << ptr << endl;
+    cout << "array:" << endl;
+    for (int i = 0; i < size; ++i)
+    {
+        *(ptr + i) = rand() % 10;
+        cout << *(ptr + i) << "\t";
+    }
+    cout << endl;
+    for (int i = 0; i < size; ++i) {
+        cout << a[i] << "\t";
+    }
+}
